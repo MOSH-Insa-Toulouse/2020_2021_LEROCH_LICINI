@@ -423,8 +423,6 @@ Wire Wire Line
 Connection ~ 3950 3550
 Wire Wire Line
 	4550 3600 4550 3900
-Wire Wire Line
-	4550 3900 5150 3900
 Connection ~ 4550 3600
 Wire Wire Line
 	7100 2950 7100 3450
@@ -448,41 +446,6 @@ Wire Wire Line
 Connection ~ 5950 2000
 Wire Wire Line
 	5950 2000 6400 2000
-$Comp
-L LTC1050:LTC1050CN U1
-U 1 1 5FEAE148
-P 4800 2800
-F 0 "U1" H 5544 2746 50  0000 L CNN
-F 1 "LTC1050CN" H 5544 2655 50  0000 L CNN
-F 2 "ltc10501:Linear_Technology-LTC1050CN-Manufacturer_Recommended" H 4800 3300 50  0001 L CNN
-F 3 "http://cds.linear.com/docs/en/datasheet/1050fb.pdf" H 4800 3400 50  0001 L CNN
-F 4 "1" H 4800 3500 50  0001 L CNN "Channels "
-F 5 "Manufacturer URL" H 4800 3600 50  0001 L CNN "Component Link 1 Description"
-F 6 "http://www.linear.com/" H 4800 3700 50  0001 L CNN "Component Link 1 URL"
-F 7 "Package Specification" H 4800 3800 50  0001 L CNN "Component Link 3 Description"
-F 8 "http://cds.linear.com/docs/en/packaging/05081510_I_N14.pdf" H 4800 3900 50  0001 L CNN "Component Link 3 URL"
-F 9 "2.5" H 4800 4000 50  0001 L CNN "GBW MHz Typical"
-F 10 "1" H 4800 4100 50  0001 L CNN "Is mA Typical"
-F 11 "LTC1050" H 4800 4200 50  0001 L CNN "Linear Technology Part Number"
-F 12 "Through Hole" H 4800 4300 50  0001 L CNN "Mounting Technology"
-F 13 "14-Lead PDIP, Body 19.558 x 6.477 mm, Pitch 2.54 mm" H 4800 4400 50  0001 L CNN "Package Description"
-F 14 "Rev I" H 4800 4500 50  0001 L CNN "Package Version"
-F 15 "4" H 4800 4600 50  0001 L CNN "SR Vus Typical"
-F 16 "ZD" H 4800 4700 50  0001 L CNN "Type"
-F 17 "0.0005" H 4800 4800 50  0001 L CNN "Vos mV Typical"
-F 18 "18" H 4800 4900 50  0001 L CNN "Vs Max V"
-F 19 "4.75" H 4800 5000 50  0001 L CNN "Vs Min V"
-F 20 "IC" H 4800 5100 50  0001 L CNN "category"
-F 21 "1326884" H 4800 5200 50  0001 L CNN "ciiva ids"
-F 22 "4b0aaad9c587ed0b" H 4800 5300 50  0001 L CNN "library id"
-F 23 "Linear Technology" H 4800 5400 50  0001 L CNN "manufacturer"
-F 24 "LT-N-14" H 4800 5500 50  0001 L CNN "package"
-F 25 "1378744365" H 4800 5600 50  0001 L CNN "release date"
-F 26 "A31D0BAB-1FA1-4CD8-9272-666BF76FB4BC" H 4800 5700 50  0001 L CNN "vault revision"
-F 27 "yes" H 4800 5800 50  0001 L CNN "imported"
-	1    4800 2800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3950 2900 4900 2900
 Wire Wire Line
@@ -494,14 +457,7 @@ Connection ~ 4550 2800
 Wire Wire Line
 	4550 2800 4550 3300
 Wire Wire Line
-	5200 3200 5150 3200
-Wire Wire Line
-	5150 3200 5150 3900
-Connection ~ 5150 3900
-Wire Wire Line
-	5150 3900 6000 3900
-Wire Wire Line
-	5200 2600 5200 1700
+	5200 2600 5200 2550
 Wire Wire Line
 	5200 1700 7200 1700
 Wire Wire Line
@@ -548,9 +504,6 @@ NoConn ~ 10550 2500
 NoConn ~ 10550 2400
 NoConn ~ 10550 2300
 NoConn ~ 10550 1600
-NoConn ~ 10550 1700
-NoConn ~ 10550 1800
-NoConn ~ 10550 1900
 NoConn ~ 10550 2000
 NoConn ~ 10550 2100
 NoConn ~ 10550 1400
@@ -717,8 +670,6 @@ NoConn ~ 10200 2600
 NoConn ~ 10200 2500
 NoConn ~ 10200 2400
 NoConn ~ 10200 2300
-Wire Wire Line
-	5500 2900 5950 2900
 Connection ~ 5950 2900
 Wire Wire Line
 	5950 2900 5950 2650
@@ -733,4 +684,87 @@ A5(SCL)
 NoConn ~ 9400 1700
 NoConn ~ 7800 3600
 NoConn ~ 4800 1300
+NoConn ~ 4550 350 
+$Comp
+L ltcTheo:LTC1050 J2
+U 1 1 5FFA0D39
+P 5200 2900
+F 0 "J2" H 5744 2991 50  0000 L CNN
+F 1 "LTC1050" H 5744 2900 50  0000 L CNN
+F 2 "ltctheo:Package_DIP-8_W7.62mm_LongPads" H 5744 2809 50  0000 L CNN
+F 3 "" H 5250 3850 50  0001 C CNN
+	1    5200 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2900 5950 2900
+Connection ~ 5200 2550
+Wire Wire Line
+	5200 2550 5200 1700
+Wire Wire Line
+	4550 3900 5200 3900
+Wire Wire Line
+	5200 3250 5200 3900
+Connection ~ 5200 3900
+Wire Wire Line
+	5200 3900 6000 3900
+NoConn ~ 5400 2600
+NoConn ~ 5400 3250
+NoConn ~ 5300 3250
+$Comp
+L power:GND #PWR0107
+U 1 1 5FFA66A6
+P 5850 4350
+F 0 "#PWR0107" H 5850 4100 50  0001 C CNN
+F 1 "GND" H 5855 4177 50  0000 C CNN
+F 2 "" H 5850 4350 50  0001 C CNN
+F 3 "" H 5850 4350 50  0001 C CNN
+	1    5850 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Female J3
+U 1 1 5FFA5146
+P 6500 4800
+F 0 "J3" H 6528 4776 50  0000 L CNN
+F 1 "Conn_01x08_Female" H 6528 4685 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 6500 4800 50  0001 C CNN
+F 3 "~" H 6500 4800 50  0001 C CNN
+	1    6500 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4500 6300 4350
+Wire Wire Line
+	6300 4350 5850 4350
+$Comp
+L power:+5V #PWR0108
+U 1 1 5FFADD5C
+P 5550 4600
+F 0 "#PWR0108" H 5550 4450 50  0001 C CNN
+F 1 "+5V" V 5550 4800 50  0000 C CNN
+F 2 "" H 5550 4600 50  0000 C CNN
+F 3 "" H 5550 4600 50  0000 C CNN
+	1    5550 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4600 6300 4600
+Text Label 5050 5300 0    60   ~ 0
+10(**/SS)
+Text Label 5200 5100 0    60   ~ 0
+11(**/MOSI)
+Wire Wire Line
+	5050 5300 6300 5300
+Wire Wire Line
+	6300 5300 6300 5200
+Wire Wire Line
+	5200 5100 6300 5100
+Text Label 5350 4800 0    60   ~ 0
+12(MISO)
+Wire Wire Line
+	5350 4800 6300 4800
+NoConn ~ 6300 5000
+NoConn ~ 6300 4900
+NoConn ~ 6300 4700
 $EndSCHEMATC

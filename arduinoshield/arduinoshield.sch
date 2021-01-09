@@ -504,9 +504,6 @@ NoConn ~ 10550 2500
 NoConn ~ 10550 2400
 NoConn ~ 10550 2300
 NoConn ~ 10550 1600
-NoConn ~ 10550 1700
-NoConn ~ 10550 1800
-NoConn ~ 10550 1900
 NoConn ~ 10550 2000
 NoConn ~ 10550 2100
 NoConn ~ 10550 1400
@@ -714,4 +711,60 @@ Wire Wire Line
 NoConn ~ 5400 2600
 NoConn ~ 5400 3250
 NoConn ~ 5300 3250
+$Comp
+L power:GND #PWR0107
+U 1 1 5FFA66A6
+P 5850 4350
+F 0 "#PWR0107" H 5850 4100 50  0001 C CNN
+F 1 "GND" H 5855 4177 50  0000 C CNN
+F 2 "" H 5850 4350 50  0001 C CNN
+F 3 "" H 5850 4350 50  0001 C CNN
+	1    5850 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Female J3
+U 1 1 5FFA5146
+P 6500 4800
+F 0 "J3" H 6528 4776 50  0000 L CNN
+F 1 "Conn_01x08_Female" H 6528 4685 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 6500 4800 50  0001 C CNN
+F 3 "~" H 6500 4800 50  0001 C CNN
+	1    6500 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4500 6300 4350
+Wire Wire Line
+	6300 4350 5850 4350
+$Comp
+L power:+5V #PWR0108
+U 1 1 5FFADD5C
+P 5550 4600
+F 0 "#PWR0108" H 5550 4450 50  0001 C CNN
+F 1 "+5V" V 5550 4800 50  0000 C CNN
+F 2 "" H 5550 4600 50  0000 C CNN
+F 3 "" H 5550 4600 50  0000 C CNN
+	1    5550 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4600 6300 4600
+Text Label 5050 5300 0    60   ~ 0
+10(**/SS)
+Text Label 5200 5100 0    60   ~ 0
+11(**/MOSI)
+Wire Wire Line
+	5050 5300 6300 5300
+Wire Wire Line
+	6300 5300 6300 5200
+Wire Wire Line
+	5200 5100 6300 5100
+Text Label 5350 4800 0    60   ~ 0
+12(MISO)
+Wire Wire Line
+	5350 4800 6300 4800
+NoConn ~ 6300 5000
+NoConn ~ 6300 4900
+NoConn ~ 6300 4700
 $EndSCHEMATC
