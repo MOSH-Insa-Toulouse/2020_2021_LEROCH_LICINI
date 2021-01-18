@@ -156,13 +156,13 @@ void loop()
   Serial.println(analogSensor);
   if(analogSensor > gasThreshold){
     digitalWrite(2,HIGH);
-    //digitalWrite(pinLED, HIGH);
-    //Serial.println("alert");
-    //myLora.tx("!"); //one byte, blocking function
+    digitalWrite(pinLED, HIGH);
+    Serial.println("alert");
+    myLora.tx("alerte"); //one byte, blocking function
   }else{
     digitalWrite(2, LOW);
-    //digitalWrite(pinLED, LOW);
-    //myLora.tx("l"); //one byte, blocking function
+    digitalWrite(pinLED, LOW);
+    //myLora.tx("OK"); //one byte, blocking function
   }
     /*Serial.println("TXing");
     myLora.tx("!"); //one byte, blocking function
@@ -170,5 +170,5 @@ void loop()
     Serial.println(response);
     response = "";
     delay(5000);*/
-    delay(1000);
+    delay(10000);
 }
