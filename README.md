@@ -8,7 +8,7 @@ Open source EDA / electronics CAD software for Windows, macOS and Linux.
 
 ## Electrical diagram
 
-![Schematic](pcbImages/pcbShema.png)
+![Schematic](pcbImages/pcbShema.PNG)
 
 ## Components placement
 
